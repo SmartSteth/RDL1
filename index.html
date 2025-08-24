@@ -2,29 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSteth - RDL1</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">SmartSteth</h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>This is my custom website built without WordPress.</p>
-    </section>
-  </main>
+  <!-- Hero -->
+  <section id="hero" class="hero reveal">
+    <div class="container">
+      <h2>Revolutionizing Respiratory Health</h2>
+      <p>SmartSteth detects early respiratory symptoms using AI-powered stethoscope technology.</p>
+      <a href="#intro" class="btn">Learn More</a>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 My Website</p>
+  <!-- Intro -->
+  <section id="intro" class="intro reveal">
+    <div class="container">
+      <h2>Introduction</h2>
+      <p>
+        SmartSteth (RDL1) is an innovative health monitoring platform designed 
+        to provide real-time detection of respiratory symptoms such as pneumonia, 
+        asthma, and COPD. By combining cutting-edge machine learning with 
+        accessible design, SmartSteth empowers both patients and healthcare 
+        professionals to take early action and improve health outcomes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features reveal">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI-Powered Detection</h3>
+          <p>Leverages machine learning to identify respiratory issues early.</p>
+        </div>
+        <div class="card">
+          <h3>Portable & Affordable</h3>
+          <p>Designed for accessibility, ensuring communities can benefit globally.</p>
+        </div>
+        <div class="card">
+          <h3>Seamless Integration</h3>
+          <p>Works with healthcare systems to improve diagnostics and care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform -->
+  <section id="platform" class="platform reveal">
+    <div class="container">
+      <h2>Our Platform</h2>
+      <p>
+        The RDL1 platform bridges the gap between modern medical technology 
+        and underserved communities. By combining cloud-based analytics, 
+        edge AI, and user-friendly devices, SmartSteth delivers insights 
+        that save lives.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact reveal">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch with our team for collaborations, support, or inquiries.</p>
+      <a href="mailto:info@smartsteth.com" class="btn">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 SmartSteth RDL1. All Rights Reserved.</p>
   </footer>
-  <script src="script.js"></script>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
